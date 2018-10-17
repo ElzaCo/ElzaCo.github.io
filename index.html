@@ -1,0 +1,119 @@
+---
+layout: null
+title: Elza Co - Home Page
+description: A spatial technology company.
+sitemap:
+    priority: 1.0
+    lastmod: 2018-10-17
+    changefreq: weekly
+---
+<!DOCTYPE HTML>
+<html>
+	<head>
+    {% include head.html %}
+
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+            <h1>{{site.title}}</h1>
+						<h2>a geospatial technology company</h2>
+						<p>Providing bespoke solutions to geospatial problems. Elza Co specializes<br> in 
+						GIS consulting and software/hardware development.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ "/" | absolute_url }}" class="logo">{{site.title}}</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            			{% include nav.html %}
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Featured Post -->
+						<article class="post featured">
+							<header class="major">
+								<h2><a href="#">No Future</a></h2>
+								<p>A motto for the pragmatic optimist.</p>
+							</header>
+							<a href="#" class="image main"><img src="{{ "/images/cataract_falls_1080.jpg" | absolute_url }}" alt="" /></a>
+			                <p>What kind of company would have "No future" as their motto? It seems rather 
+			                pessimistic, but it is meant to breath optimism. There is <b>no future</b>, except the
+			                one we make for ourselves. We need to be the force for good we desire to see in
+			                the world. The world can be a better place, and it will be because of us -- all of
+			                us.</p>
+			                <p>Elza Co produces software and hardware tools that are <b>open source</b>. We believe 
+			                that a tool being inaccessible because of cost disproportionately hurts those with 
+			                the greatest need. Accordingly, we publish all of our software for free on our site 
+			                or github as well as the schematics and build files for hardware. We do sell hardware 
+			                because it saves to buy PCBs and components in bulk, but in the end we pass the 
+			                savings on to the consumer.</p>
+							<p>We at Elza Co also <b>consult on geospatial projects</b>. We have expertise in a variety 
+							of tasks including: data collection, data processing and analysis, database 
+							development, remote drone piloting, and web map application development. If you have 
+							a geospatial project, we'd love to hear about it. Contact us in the form below or 
+							email us at <a href="mailto:info@elza-co.com">info@elza-co.com</a>.</p>
+
+						</article>
+
+						<!-- Posts -->
+						<!-- <section class="posts">
+			                {% for post in site.posts limit:3 %}
+			                {% assign mod3 = forloop.index | modulo: 3 %}
+			  								<article>
+			  									<header>
+			  										<span class="date">{{ post.date | date_to_string }}</span>
+			  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+			  									</header>
+			  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+			  									<p>{{ post.excerpt }}</p>
+			  									<ul class="actions">
+			  										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
+			  									</ul>
+			  								</article>
+			                  {% if mod3 == 0 %}
+			                  <article>
+			  									<header>
+			  										<h2><a href="#">Sponsored</a></h2>
+			  									</header>
+
+			  								</article>
+			                  {% endif %}
+			                {% endfor %}
+
+						</section> -->
+
+						<!-- Footer -->
+						<!-- <footer>
+			                <ul class="actions">
+			                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
+			                </ul>
+						</footer> -->
+
+					</div>
+
+				<!-- Footer -->
+        {% include foot.html %}
+
+			</div>
+
+		<!-- Scripts -->
+		{% include scripts-main.html %}
+    {% include tracking.html %}
+
+	</body>
+</html>
