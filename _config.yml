@@ -50,7 +50,6 @@ email:              info@elza-co.com
 
 # Gems
 gems:
-  - jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
