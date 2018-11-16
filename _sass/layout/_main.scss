@@ -1,0 +1,328 @@
+/* Normalize */
+html, body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+section {
+	padding: 6em 0 4em 0;
+}
+
+h1,h2,h3 {
+	color: _palette(fg-bold);
+}
+
+/* Banner */
+.banner {
+	padding: 14em 0 11em 0;
+	background-attachment: fixed;
+	background-image: url(/assets/images/overlay.png), url($background-image);
+	background-position: center top;
+	background-size: cover;
+
+	h1,
+	h2 {
+		color: _palette(bg);
+	}
+
+	svg {
+		height: 4em;
+		padding-bottom: 2em;
+		fill: white;
+		filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+	}
+}
+
+/* Projects */
+.projects,
+.products {
+	img {
+		height: 15em;
+		border-radius: 5px;
+		box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+	}
+	& .goto {
+		position: absolute;
+		bottom: 1em;
+	}
+}
+
+.project-title {
+	h1,
+	p {
+		text-align: center;
+	}
+	h1 {
+		margin: 0;
+	}
+}
+.content {
+	padding-top: 0;
+}
+
+/* Contact */
+.contact {
+	display: grid;
+	grid-template-areas: 'form location'
+						 'form phone'
+						 'form email'
+						 'form other';
+	grid-template-columns: 1fr 1fr;
+	background-color: _palette(alt,bg);
+	padding: 0;
+	
+	* {
+		font-size: 0.8rem;
+	}
+
+	label, h3, input[type="submit"] {
+		text-transform: uppercase;
+		font-weight: _font(weight-bold);
+	}
+
+	& .box {
+		padding: 3.5rem 4rem;
+	}
+
+	& .form { 
+		grid-area: form;
+		border-right: solid 2px #e2e2e2;
+
+		& .field {
+			padding: 1.5rem 0 0 1.5rem;
+
+		}
+
+		label {
+			display: block;
+			margin: 0 0 .75rem 0;
+		}
+
+		input[type="text"], 
+		textarea {
+			width: 100%;
+			font-size: 1.2em;
+			border: solid 2px #e2e2e2;
+			background-color: _palette(alt,bg);
+			outline: 0;
+			padding: 0.2rem 0.5rem;
+
+			&:focus {
+				border-color: _palette(accent);
+			}
+		}
+
+		input[type="text"] {
+			height: 2rem;
+		}
+
+		text-area {
+			line-height: 2.375;
+			resize: auto;
+			cursor: text;
+			white-space: pre-wrap;
+			overflow-wrap: break-word;
+		}
+
+		input[type="submit"] {
+			background-color: transparent;
+			border: solid 2px _palette(fg);
+			color: _palette(fg);
+			cursor: pointer;
+			line-height: 3rem;
+			padding: 0 2rem;
+
+			&:hover {
+				border-color: _palette(accent);
+				color: _palette(accent);
+			}
+		}
+	}
+
+	& .location { grid-area: location; }
+	& .phone { grid-area: phone; }
+	& .email { grid-area: email; }
+	& .other { grid-area: other; }
+
+	& .location,
+	& .phone,
+	& .email,
+	& .other {
+		display: grid;
+		grid-template-columns: 8em 1fr;
+
+		h3, p {
+			margin: 0;
+		}
+	}
+
+	& > * {
+		border-top: solid 2px #e2e2e2;
+	}
+	& > *:nth-child(-n + 2) {
+		border-top: none;
+	}
+}
+
+
+.fg-light {
+	color: _palette(fg-light);
+}
+.float-right {
+	float: right;
+}
+
+/* Columns */
+.box {
+	padding: 1em;
+	position: relative;
+}
+.col-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 1em;
+}
+
+/* Containers */
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 1280px) {
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 100em;
+		min-width: 80em;
+	}
+
+	.container.\37 5\25 {
+		width: 60em;
+	}
+
+	.container.\35 0\25 {
+		width: 40em;
+	}
+
+	.container.\32 5\25 {
+		width: 20em;
+	}
+
+	.container {
+		width: 80em;
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 81.25em;
+		min-width: 65em;
+	}
+
+	.container.\37 5\25 {
+		width: 48.75em;
+	}
+
+	.container.\35 0\25 {
+		width: 32.5em;
+	}
+
+	.container.\32 5\25 {
+		width: 16.25em;
+	}
+
+	.container {
+		width: 65em;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 112.5%;
+		min-width: 90%;
+	}
+
+	.container.\37 5\25 {
+		width: 67.5%;
+	}
+
+	.container.\35 0\25 {
+		width: 45%;
+	}
+
+	.container.\32 5\25 {
+		width: 22.5%;
+	}
+
+	.container {
+		width: 90%;
+	}
+
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 112.5%;
+		min-width: 90%;
+	}
+
+	.container.\37 5\25 {
+		width: 67.5%;
+	}
+
+	.container.\35 0\25 {
+		width: 45%;
+	}
+
+	.container.\32 5\25 {
+		width: 22.5%;
+	}
+
+	.container {
+		width: 90% !important;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.container.\31 25\25 {
+		width: 100%;
+		max-width: 112.5%;
+		min-width: 90%;
+	}
+
+	.container.\37 5\25 {
+		width: 67.5%;
+	}
+
+	.container.\35 0\25 {
+		width: 45%;
+	}
+
+	.container.\32 5\25 {
+		width: 22.5%;
+	}
+
+	.container {
+		width: 90% !important;
+	}
+
+}
+
+@media screen and (max-width: 1080px) and (min-height: 650px) {
+	.banner {
+		background-size: auto 45em;
+	}
+}

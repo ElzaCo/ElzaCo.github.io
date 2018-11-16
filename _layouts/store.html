@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% include head.html %}
+
+		<style type="text/css">
+			header {
+				background: #312a22;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>{{site.title}}</h1>
+			<nav>
+				{% include nav.html %} 
+			</nav>
+		</header>
+		
+		<!--  Auto gen -->
+		<section class="project-title container 75%">
+			<h1>{{ page.title }}</h1>
+			<p>{% if page.tags.size > 0 %}Tag{% if page.tags.size > 1 %}s{% endif %}: {{ page.tags | sort | join: ", " }}{% endif %}
+			</p>
+		</section>
+		
+		<!-- Content -->
+		<section class="content container 75%">
+			{{ content }}
+		</section>
+
+
+
+
+		<!-- Contact -->
+		<section class="contact">
+			<div class="form box">
+				<form method="POST" action="https://formspree.io/{{site.email}}">
+					<input type="hidden" name="_next" value="{{site.url}}{{site.formspree_thankyou_page}}" />
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="3"></textarea>
+					</div>
+					<div class="field">
+						<input type="submit" value="Send Message" />
+					</div>
+				</form>
+			</div>
+			<div class="location box">
+				<h3>Location</h3>
+				<p>{{site.location}}</p>
+			</div>
+			<div class="phone box">
+				<h3>Phone</h3>
+				<p><a href="tel:{{site.phone}}">{{site.phone}}</a></p>
+			</div>
+			<div class="email box">
+				<h3>Email</h3>
+				<p><a href="mailto:{{site.email}}">{{site.email}}</a></p>
+			</div>
+			<div class="other box">
+				<h3>Github</h3>
+				<p><a href="https://github.com/{{site.github}}">github</a></p>
+			</div>
+		</section>
+	</body>
+</html>

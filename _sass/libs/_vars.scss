@@ -1,23 +1,36 @@
+// Misc.
+$misc: (
+	z-index-base:		10000
+);
+
+// Size.
+$size: (
+	element-height:		3rem,
+	element-margin:		2rem,
+	padding:			2rem,
+	wrapper:			72rem
+);
+
 // Font.
 $font: (
-	family:				('Merriweather', Georgia, serif),
-	family-heading:		('Source Sans Pro', Helvetica, sans-serif),
+	family:				('Lato', Helvetica, sans-serif),
+	family-serif:		('Merriweather', Georgia, serif),
+	family-heading:		('Raleway', Helvetica, sans-serif),
 	family-fixed:		('Courier New', monospace),
-	weight:				300,
-	weight-bold:		600,
+	weight-light:		300,
+	weight:				400,
+	weight-bold:		700,
 	weight-heading:		900
 );
 
 // Palette.
 $palette: (
-	wrapper-bg:			#212931,
-
 	bg:					#ffffff,
-	fg:					#212931,
-	fg-bold:			#212931,
-	fg-light:			mix(#212931, #ffffff, 50%),
-	border:				mix(#dcdcdc, #ffffff, 50%),
-	border-bg:			rgba(#dcdcdc, 0.25),
+	fg:					#666,
+	fg-bold:			#484848,
+	fg-light:			#aaa,
+	border:				mix(#666, #ffffff, 50%),
+	border-bg:			rgba(#666, 0.25),
 	accent:				#18bfef,
 
 	alt: (
