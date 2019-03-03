@@ -5,6 +5,10 @@ html, body {
 	border: 0px;
 }
 
+body {
+	min-width: 320px;
+}
+
 section {
 	padding: 6em 0 4em 0;
 }
@@ -90,7 +94,7 @@ h1,h2,h3 {
 		border-right: solid 2px #e2e2e2;
 
 		& .field {
-			padding: 1.5rem 0 0 1.5rem;
+			padding: 1.5rem 0 0 0;
 
 		}
 
@@ -107,6 +111,10 @@ h1,h2,h3 {
 			background-color: _palette(alt,bg);
 			outline: 0;
 			padding: 0.2rem 0.5rem;
+
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 
 			&:focus {
 				border-color: _palette(accent);
@@ -293,6 +301,56 @@ h1,h2,h3 {
 		width: 90% !important;
 	}
 
+	header h1 {
+		display: none;
+	}
+
+
+	.col-2 {
+		grid-template-columns: 1fr;
+	}
+
+	.contact {
+		grid-template-areas: 'form'
+							 'location'
+							 'phone'
+							 'email'
+							 'other';
+		grid-template-columns: 1fr;
+	}
+
+	.contact .box {
+		border: none;
+	}
+
+	.contact>*:nth-child(2) {
+		border-top: solid 2px #e2e2e2;
+		padding-top: 4rem !important;
+	}
+
+	.contact>*:nth-child(n+2) {
+		padding: 1rem 4rem;
+	}
+
+	.contact>*:last-child {
+		padding-bottom: 4rem;
+	}
+
+	.contact .location, 
+	.contact .phone, 
+	.contact .email, 
+	.contact .other {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.contact .box h3 {
+		text-align: right;
+		padding-right: 0.5rem;
+	}
+
+	.contact .box p {
+		padding-left: 0.5rem;
+	}
 }
 
 @media screen and (max-width: 480px) {

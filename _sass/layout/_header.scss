@@ -57,3 +57,17 @@ nav ul li:first-child {
 nav .active {
 	/*text-decoration: underline;*/
 }
+
+@media screen and (max-width: 480px) {
+
+		nav ul li {
+			display: block;
+			margin-left: 0;
+			padding-top: 1rem;
+		}
+
+		nav {
+			text-align: center;
+			position: initial;
+		}
+}
