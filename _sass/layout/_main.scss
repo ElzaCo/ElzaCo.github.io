@@ -19,7 +19,8 @@ h1,h2,h3 {
 
 /* Banner */
 .banner {
-	padding: 14em 0 11em 0;
+	padding-top: 14em;
+	padding-bottom: 11em;
 	background-attachment: fixed;
 	background-image: url(/assets/images/overlay.png), url($background-image);
 	background-position: center top;
@@ -183,13 +184,12 @@ h1,h2,h3 {
 
 /* Columns */
 .box {
-	padding: 1em;
 	position: relative;
 }
 .col-2 {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 1em;
+	column-gap: 4em;
 }
 
 /* Containers */
@@ -305,6 +305,10 @@ h1,h2,h3 {
 		display: none;
 	}
 
+	.banner {
+		padding: 14em 1em 11em 1em;
+	}
+
 
 	.col-2 {
 		grid-template-columns: 1fr;
@@ -321,19 +325,23 @@ h1,h2,h3 {
 
 	.contact .box {
 		border: none;
+		padding: 4em 0;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.contact>*:nth-child(2) {
 		border-top: solid 2px #e2e2e2;
-		padding-top: 4rem !important;
+		padding-top: 4em !important;
 	}
 
 	.contact>*:nth-child(n+2) {
-		padding: 1rem 4rem;
+		padding: 1em 0;
 	}
 
 	.contact>*:last-child {
-		padding-bottom: 4rem;
+		padding-bottom: 4em;
 	}
 
 	.contact .location, 
@@ -345,11 +353,11 @@ h1,h2,h3 {
 
 	.contact .box h3 {
 		text-align: right;
-		padding-right: 0.5rem;
+		padding-right: 0.5em;
 	}
 
 	.contact .box p {
-		padding-left: 0.5rem;
+		padding-left: 0.5em;
 	}
 }
 
