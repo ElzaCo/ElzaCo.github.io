@@ -32,9 +32,8 @@ sitemap:
 		<section class="container 75% col-2 projects">
 			{% assign pages = site.projects | sort:"url"  %}
 			{% for page in pages %}
-				<div class="box">
-					<a class="float-right" href="{{ site.baseurl }}{{ page.url }}"><img src="{{ page.image }}"></a>
-				</div>
+				<a class="box img-preview" style="background-image:url('{{ page.image }}');" href="{{ site.baseurl }}{{ page.url }}">
+				</a>
 				<div class="box">
 					<h3>{{ page.title }}</h3>
 					<p>{{ page.description }}</p>
