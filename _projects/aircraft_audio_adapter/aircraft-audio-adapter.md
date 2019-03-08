@@ -8,7 +8,7 @@ date-end: Current
 project-type: hardware
 tags:    [hardware, aviation]
 image: "/projects/aircraft_audio_adapter/aircraft_audio_adapter_pcb_layout.jpg"
-permalink: /projects/aircraft_audio_adapter/
+permalink: /aircraft-audio-adapter/
 ---
 
 ## Background
