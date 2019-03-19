@@ -47,5 +47,5 @@ An ideal scenario to meet these needs would utilize equipment aviators already o
 - [x] Small run of mkII board
 - [x] Test mkII
 - [x] Full production of mkII board
-- [x] Secure source for cheap cables and splitters.
+- [x] Secure source for cheap cables ~~and splitters~~.
 - [ ] Make available to public
