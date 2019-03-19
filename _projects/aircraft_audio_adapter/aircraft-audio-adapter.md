@@ -45,7 +45,7 @@ An ideal scenario to meet these needs would utilize equipment aviators already o
 - [x] Test prototype PCB
 - [x] Revise board (mark II)
 - [x] Small run of mkII board
-- [ ] Test mkII
-- [ ] Full production of mkII board
-- [ ] Secure source for cheap cables and splitters.
+- [x] Test mkII
+- [x] Full production of mkII board
+- [x] Secure source for cheap cables and splitters.
 - [ ] Make available to public
